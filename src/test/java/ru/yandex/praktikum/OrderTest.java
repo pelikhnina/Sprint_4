@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import ru.yandex.praktium.pageobject.OrderStepOnePage;
@@ -50,6 +52,11 @@ public class OrderTest {
     @Before
     public void start() {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\Nina\\WebDriver\\bin\\geckodriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Nina\\WebDriver\\bin\\chromedriver.exe");
+
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless");
+        //driver = new ChromeDriver(options);
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
         driver = new FirefoxDriver(options);
