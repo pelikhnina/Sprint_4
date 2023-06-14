@@ -10,6 +10,7 @@ public class ScooterPage {
     private final WebDriver driver;
     private final By cookieButton = By.id("rcc-confirm-button");
     private final By startOrderButton = By.xpath("//*[@id=\"root\"]/div/div/div[1]/div[2]/button[1]");
+    private final By startOrderBottomButton = By.xpath("//*[@id=\"root\"]/div/div/div[4]/div[2]/div[5]/button");
 
     private final By accordion = By.xpath("//div[@class=\"accordion\"]");
     private final By accordionItem = By.xpath(".//div[@class=\"accordion__item\"]");
@@ -35,6 +36,9 @@ public class ScooterPage {
     }
     public void startOrder() {
         driver.findElement(startOrderButton).click();
+    }
+    public void startOrderBottomButton() {
+        driver.findElement(startOrderBottomButton).click();
     }
 
     public void clickOnAccordionItem (String question) {
